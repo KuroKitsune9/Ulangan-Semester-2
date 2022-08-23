@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <title>Belajar Harmonika</title>
+    <style>
+        h1{
+            text-align: center;
+            font: oblique;
+        }
+
+        a{
+            color: white;
+        }
+    .container{
+        font-style: inherit;
+        }
+    .navbar {
+padding: 0;
+}
+
+.navbar ul {
+margin: 0;
+padding: 0;
+display: flex;
+list-style: none;
+align-items: center;
+}
+.navbar li {
+position: relative;
+}
+.navbar > ul > li {
+white-space: nowrap;
+padding: 10px 0 10px 28px;
+}
+.navbar a, .navbar a:focus {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 3px;
+font-size: 15px;
+font-weight: 600;
+color: #222222;
+white-space: nowrap;
+transition: 0.3s;
+position: relative;
+}
+.navbar a i, .navbar a:focus i {
+font-size: 12px;
+line-height: 0;
+margin-left: 5px;
+}
+.navbar > ul > li > a:before {
+content: "";
+position: absolute;
+width: 100%;
+height: 2px;
+bottom: -6px;
+left: 0;
+background-color: #106eea;
+visibility: hidden;
+width: 0px;
+transition: all 0.3s ease-in-out 0s;
+}
+.navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+visibility: visible;
+width: 100%;
+}
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+color: #106eea;
+}
+.btn {
+        background-color: #1597BB;
+    }
+
+    .btn:hover{
+        background: #1597BB;
+            box-shadow: 0px 0px 5px #1597BB,
+                        0px 0px 15px #1597BB,
+                        0px 0px 25px #1597BB,
+                        0px 0px 50px #1597BB;
+    }
+    .item{
+        transition: .5s ease-in-out;
+    }
+    .item :hover{
+        filter: brightness(80%)
+    }
+
+    </style>
+</head>
+<body>
+    <nav id="navbar" class="navbar">
+    <ul>
+        <li><a class="nav-link scrollto" href="index.html"><i class="bi bi-house-fill"></i>Home</a></li>
+        <li><a class="nav-link scrollto" href="Program.html"><i class="bi bi-clipboard2-check-fill"></i>Program</a></li>
+        <li><a class="nav-link scrollto" href="Gallery.html"><i class="bi bi-camera-fill"></i>Gallery</a></li>
+        <li><a class="nav-link scrollto" href="About.html"><i class="bi bi-file-person"></i>About Me</a></li>
+        <li><a class="nav-link scrollto active" href="contact.html"><i class="fa-solid fa-comment"></i>Komentar</a></li>
+    </ul>
+    </nav>
+    <h1>contact me</h1>
+       <!-- Form -->
+       <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <label for="firstname" class="fw-semibold mb-2">Firstname : </label>
+                        <input type="text" name="firstname" class="form-control rounded-1" id="firstname"
+                            placeholder="Firstname" required>
+                    </div>
+                    <div class="col">
+                        <label for="firstname" class="fw-semibold mb-2">Lastname : </label>
+                        <input type="text" name="lastname" class="form-control rounded-1" id="lastname"
+                            placeholder="Lastname" required></div>
+                </div>
+                
+                <label for="msg" class="fw-semibold mt-3 mb-2">Komentar : </label>
+                <textarea name="msg" id="msg" class="form-control rounded-1" rows="5"
+                    placeholder="Message"></textarea>
+                <input type="button" value="Kirim" class="btn btn-primary rounded-5 mt-4" onclick="tambah()">
+            </div>
+            <!-- Text -->
+            <div class="col ms-3">
+                <div class="location mx-5">
+                    <h2 class="text-dark">Alamat</h2>
+                    <p class="fs-5 ms-2 mt-3"><i class="fa-solid fa-location-dot"></i> <span class="ms-2">
+                            Gg. Babakan TVRI 1 RT 2 RW 1 no 29 
+                            </span> </p>
+                    <p class="fs-5 ms-2"><i class="fa-solid fa-envelope"></i> <span class="ms-2">
+                            rafidalilah@gmail.com</span></p>
+                    <p class="fs-5 ms-2"><i class="fa-solid fa-phone"></i><span class="ms-2"> +62 896 8749 0286</span>
+                    </p>
+                </div>
+                <div class="feedback mx-5 mt-5">
+
+                </div>
+            </div>
+            <!-- A Text -->
+        </div>
+    </div>
+    <!-- A Form -->
+
+    <!-- Comment -->
+    <div class="row">
+        <div class="col">
+            <div class="tampilan" style="display: none;">
+                <table class=" table table-striped mt-5" id="table" ">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Name</th>
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class=" col position-relative">
+                    
+            </div>
+        </div>
+    </div>
+    <!-- A Comment -->
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script>
+        var pilihRow = null;
+
+function tambah() {
+    if (validasi()) {
+        var formData = readData();
+
+        if (pilihRow == null)
+            inputTabel(formData);
+    }
+}
+var i = 0;
+
+function readData() {
+    Hide()
+    var formData = {};
+    var firstname = document.getElementById('firstname').value
+    var lastname = document.getElementById('lastname').value
+    i++;
+    formData['nomor'] = `${i}`
+    formData['nama'] = firstname
+    formData["fullname"] = `${firstname} ${lastname}`;
+    formData["msg"] = document.getElementById("msg").value;
+    return formData;
+}
+
+
+// Function tambah data ke tabel
+function inputTabel(data) {
+
+    var table = document
+        .getElementById("table")
+        .getElementsByTagName("tbody")[0];
+    var newRow = table.insertRow(table.length);
+    cell1 = newRow.insertCell(0);
+    cell1.innerHTML = data.nomor;
+    cell2 = newRow.insertCell(1);
+    cell2.innerHTML = data.fullname;
+    cell3 = newRow.insertCell(2);
+    cell3.innerHTML = data.msg;
+    alert(data.nama)
+}
+
+function alert(nama) {
+    swal({
+        title: `Thank You ${nama}`,
+        text: "Thank you for giving your message",
+        icon: "success",
+        button: "OK",
+    });
+}
+
+function validasi() {
+    isValid = true;
+    if (document.getElementById("firstname").value == "") {}
+    return isValid;
+}
+
+function Hide() {
+    tampilan = document.querySelector('.tampilan')
+    tampilan.style.display = 'block'
+}
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+    <footer class="bg-primary text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+          
+      
+            <!-- Google -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #dd4b39;"
+              href="https://www.google.com/"
+              role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #ac2bac;"
+              href="https://www.instagram.com/muharafi6887/"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <!--Whatssapp-->
+            <a href="https://api.whatsapp.com/send/?phone=6289687490286&text&app_absent=0" class="btn btn-primary btn-floating m-1" style="background-color: #00C897;">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-5" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">Muharafi</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+
+</html>
